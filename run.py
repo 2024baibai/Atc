@@ -23,9 +23,6 @@ def upload():
     url=t.upload(filepath)
     return jsonify({'upload':True,'href':url})
 
-app.jinja_env.globals['limit']=limit
-
-
 
 if __name__ == "__main__":
     app.run()
