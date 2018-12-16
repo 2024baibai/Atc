@@ -35,7 +35,7 @@ ps. 配置云打码是为了自动登录微博。
 
 3. 安装依赖&运行
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 gunicorn -keventlet -b 0:35000 run:app
 ```
 然后访问:`http://ip:35000`
