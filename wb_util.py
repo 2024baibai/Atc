@@ -141,7 +141,7 @@ class Weibo:
         image_url = 'https://picupload.weibo.com/interface/pic_upload.php?cb=https%3A%2F%2Fweibo.com%2Faj%2Fstatic%2Fupimgback.html%3F_wv%3D5%26callback%3DSTK_ijax_1518610449473223&mime=image%2Fjpeg&data=base64&url=weibo.com%2Fu%2F6483607008&markpos=1&logo=1&nick=%40%E5%A6%B9%E5%AD%90%E8%AF%B4ok&marks=0&app=miniblog&s=rdxt&pri=null&file_source=1'
         if image_path.startswith('http'):
             headers={
-                ,'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+                'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
                 }
             r=requests.get(image_path,headers=headers)
             img_cont=r.text
