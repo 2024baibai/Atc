@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Abbey's微博图床
+    </title>
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.1.1/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/demo.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="/">
+                <span class="fa fa-cloud-upload"></span>Weibo Image Storage Service</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://www.abbeyok.com" target="_blank" >Abbey's Blog</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a target="_blank" href="https://github.com/abbeyokgo/Atc">Fork Me</a></li>
+                    </ul>
+                </div>
+                <!-- /.nav-collapse -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.navbar -->
+        <div class="page-body">
+            <div id="post-container" class="container">
+                <div class="page-container">
+                    <h1 id="demo">Abbey微博图床</h1>
+                    <p>您可以尝试<B>文件拖拽</B>，使用QQ截屏工具，然后激活窗口后<B>粘贴</B>，或者<B>点击添加图片按钮</B>，来上传图片</p>
+                    <div id="uploader" class="wu-example">
+                        <div class="queueList">
+                            <div id="dndArea" class="placeholder">
+                                <div id="filePicker"></div>
+                                <p>或将照片拖到这里，单次最多可选300张</p>
+                            </div>
+                        </div>
+                        <div class="statusBar" style="display:none;">
+                            <div class="progress">
+                                <span class="text">0%</span>
+                                <span class="percentage"></span>
+                            </div>
+                            <div class="info"></div>
+                            <div class="btns">
+                                <div id="filePicker2"></div>
+                                <div class="uploadBtn">开始上传</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" class="btn btn-default" onclick="SelSize('mw690')">略缩图</button>
+                      <button type="button" class="btn btn-default" onclick="SelSize('mw1024')">大图</button>
+                      <button type="button" class="btn btn-default" onclick="SelSize('mw2048')">超大图</button>
+                      <button type="button" class="btn btn-primary" onclick="SelSize('large')">原图</button>
+                    </div>
+                    <ul class="list-group" id="result">
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer" class="footer">
+            <div class="footer-inner container">
+                <div class="text-center">
+                    <p class="copyright">Abbey微博图床由<a href="https://www.abbeyok.com">Abbey</a>负责维护</p>
+                    <p>&copy;2018 <a href="https://www.abbeyok.com">Abbey</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.1.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/webuploader.js"></script>
+    <script type="text/javascript" src="/static/js/demo.js"></script>
+    <script type="text/javascript">
+        function SelSize(target_size) {
+            var sizes=['mw690','mw1024','mw2048','large'];
+            $('.imgurl').each( function( index, val ) {
+                console.log($(this).val());
+                for(var idx=0;idx<=sizes.length-1;idx++){
+                    var s=sizes[idx];
+                    console.log(idx);
+                    $(this).val($(this).val().replace(s,target_size));
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

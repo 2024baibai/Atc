@@ -1,0 +1,7 @@
+flask
+requests
+rsa
+pillow
+eventlet
+gunicorn
+git+https://github.com/Supervisor/supervisor
