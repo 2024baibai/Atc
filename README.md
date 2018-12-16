@@ -25,8 +25,8 @@ ps. 配置云打码是为了自动登录微博。
 - `WEIBO_PASSWORD`:微博密码
 
 #### 云打码的用户名、密码
-- `YUNDAMA_USERNAME`：云打码账号
-- `YUNDAMA_PASSWORD`：云打码密码
+- `YUNDAMA_USERNAME`:云打码账号
+- `YUNDAMA_PASSWORD`:云打码密码
 
 云打码注册地址：[http://www.yundama.com/index/reg](http://www.yundama.com/index/reg)
 
@@ -46,6 +46,7 @@ gunicorn -keventlet -b 0:35000 run:app
 注意：**端口号**
 
 5. 配置开机启动(仅限**centos7**，其他系统请自行搜索)
+
 **注意目录是否正确**
 ```
 cp supervisord.conf.sample supervisord.conf
