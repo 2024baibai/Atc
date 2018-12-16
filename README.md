@@ -21,12 +21,12 @@ cd Atc
 ps. 配置云打码是为了自动登录微博。
 
 #### 微博用户名密码
-- WEIBO_USERNAME=''
-- WEIBO_PASSWORD=''
+- `WEIBO_USERNAME`:微博账号
+- `WEIBO_PASSWORD`:微博密码
 
 #### 云打码的用户名、密码
-- YUNDAMA_USERNAME = ''
-- YUNDAMA_PASSWORD = ''
+- `YUNDAMA_USERNAME`：云打码账号
+- `YUNDAMA_PASSWORD`：云打码密码
 
 云打码注册地址：[http://www.yundama.com/index/reg](http://www.yundama.com/index/reg)
 
