@@ -41,6 +41,7 @@ gunicorn -keventlet -b 0:35000 run:app
 然后访问:`http://ip:35000`
 
 4. 绑定域名
+
 参考[PyOne文档-绑定域名][https://wiki.pyone.me/pyone-an-zhuang/bang-ding-yu-ming.html]
 
 注意：**端口号**
