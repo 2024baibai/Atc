@@ -42,7 +42,7 @@ gunicorn -keventlet -b 0:35000 run:app
 
 4. 绑定域名
 
-参考[PyOne文档-绑定域名][https://wiki.pyone.me/pyone-an-zhuang/bang-ding-yu-ming.html]
+参考 [PyOne绑定域名](https://wiki.pyone.me/pyone-an-zhuang/bang-ding-yu-ming.html)
 
 注意：**端口号**
 
