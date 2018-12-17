@@ -11,6 +11,7 @@
 cd /home
 git clone https://github.com/abbeyokgo/Atc.git
 cd Atc
+mkdir upload
 ```
 
 2. 配置账号信息
