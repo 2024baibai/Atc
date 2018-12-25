@@ -80,11 +80,11 @@ jQuery(function() {
 
         disableGlobalDnd: true,
 
-        chunked: true,
+        chunked: false,
         server: '/upload',
         fileNumLimit: 20,
-        fileSizeLimit: 10 * 1024 * 1024,    // 200 M
-        fileSingleSizeLimit: 10 * 1024 * 1024    // 50 M
+        fileSizeLimit: 400 * 1024 * 1024,    // 200 M
+        fileSingleSizeLimit: 20 * 1024 * 1024    // 50 M
     });
 
     // 添加“添加文件”的按钮，
