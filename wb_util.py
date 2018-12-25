@@ -169,11 +169,14 @@ class Weibo:
             print('load cookies and login success')
         else:
             print('load cookies but login fail')
-            self.login(with_code=True)
+            self.login(with_code=False)
+            if not self.isLogin():
+                self.login(with_code=True)
             if self.login_cnt<=3:
                 self._login()
 
     def upload(self,image_path):
+        self._login()
         url = self.request_image_url(image_path)
         return url
 
