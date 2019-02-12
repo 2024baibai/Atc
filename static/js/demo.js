@@ -397,7 +397,7 @@ jQuery(function() {
     };
     //上传完成
     uploader.onUploadSuccess=function(file,data) {
-        $('#' + file.id+'re').val(data.href);
+        $('#' + data.fileid+'re').val(data.href);
     };
     uploader.on( 'all', function( type ) {
         var stats;

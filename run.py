@@ -17,11 +17,12 @@ def index():
 @app.route('/upload', methods=['POST'])
 def upload():
     name=request.form.get('name')
+    fileid=request.form.get('id')
     upload_file = request.files['file']
     filepath=u'./upload/{}'.format(name)
     upload_file.save(filepath)
     url=t.upload(filepath)
-    return jsonify({'upload':True,'href':url})
+    return jsonify({'upload':True,'href':url,'fileid':fileid})
 
 
 if __name__ == "__main__":
